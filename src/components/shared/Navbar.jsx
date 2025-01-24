@@ -1,18 +1,12 @@
 "use client";
-import React, { useState } from 'react';
+import React from 'react';
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import { LoginLink, LogoutLink } from '@kinde-oss/kinde-auth-nextjs';
-
-// react icons
-import { IoIosSearch } from "react-icons/io";
-import { CiMenuFries } from "react-icons/ci";
 import Link from 'next/link';
 
 const Navbar = () => {
-    const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
     const { isAuthenticated, isLoading } = useKindeBrowserClient();
-
     const { user, getUser } = useKindeBrowserClient();
     const alsoUser = getUser();
 
@@ -35,7 +29,7 @@ const Navbar = () => {
                 <div className="items-center gap-2 flex">
 
                     {
-                    !user?.email ? <LoginLink className="py-[7px] text-[1rem] px-[16px] rounded-full capitalize bg-[#3B9DF8] text-white hover:bg-blue-400 transition-all duration-300 ">Sign in</LoginLink> : <LogoutLink className="py-[7px] text-[1rem] px-[16px] rounded-full capitalize bg-[#3B9DF8] text-white hover:bg-blue-400 transition-all duration-300">Log out</LogoutLink>
+                        !user?.email ? <LoginLink className="py-[7px] text-[1rem] px-[16px] rounded-full capitalize bg-[#3B9DF8] text-white hover:bg-blue-400 transition-all duration-300 ">Login</LoginLink> : <LogoutLink className="py-[7px] text-[1rem] px-[16px] rounded-full capitalize bg-[#3B9DF8] text-white hover:bg-blue-400 transition-all duration-300">Log out</LogoutLink>
                     }
                 </div>
             </div>{/* container */}
