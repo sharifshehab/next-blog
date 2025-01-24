@@ -2,23 +2,18 @@ import React from 'react';
 // react icons
 import { CgFacebook } from "react-icons/cg";
 import { BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
-import { SlArrowUp } from "react-icons/sl";
 
 const Footer = () => {
     return (
-        <footer className="bg-white w-full p-3 lg:p-4 relative">
-
+        <footer className="w-full">
             <div
-                className="w-full flex items-center justify-center pt-[30px] flex-col gap-[20px] pb-[130px]">
-                <a href="#" className='text-3xl text-blue-400'>Next Blog</a>
+                className="w-full bg-white flex items-center justify-center pt-[30px] flex-col gap-[20px] pb-5">
+                <a href="#" className='text-3xl text-blue-400'>Next <span className='px-3 py-1 bg-blue-400 text-white'>Blog</span></a>
 
-                <p className="text-[0.9rem] text-center sm:text-start text-gray-600">High level
-                    experience in web design and development knowledge, producing quality work.
+                <p className="text-[0.9rem] text-center sm:text-start text-gray-600">Join the trending topic and latest news with nextBlog.
                 </p>
 
-                <button className="py-3 px-6 rounded-full bg-primary text-white">Contact Us</button>
-
-                <div className="flex gap-[15px] text-black mt-4">
+                <div className="flex gap-[15px] text-black">
                     <a className="text-[1.3rem] p-1.5 cursor-pointer rounded-full bg-white text-text boxShadow">
                         <CgFacebook />
                     </a>
@@ -35,8 +30,8 @@ const Footer = () => {
             </div>
 
             <div
-                className="text-center">
-                <p className="text-sm text-gray-900">© 2021 All Rights Reserved</p>
+                className="text-center bg-blue-400 py-2">
+                <p className="text-sm text-white">© 2025 All Rights Reserved</p>
             </div>
         </footer>
     );
